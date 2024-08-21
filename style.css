@@ -21,8 +21,21 @@ h1{
     
 }
 
+#buttoncontainer{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.buttons{
+    font-family: 'Press Start 2P';
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 video {
     max-width: 100%;         
     width: 600px;            
     height: auto;
 }
+
+html {background-color: rgb(255, 178, 178)}

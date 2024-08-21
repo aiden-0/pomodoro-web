@@ -9,9 +9,13 @@
 </head>
 <body>
     <h1 class="title">Brutal Pomodoro</h1>
-    <hr>
+    <hr color="black">
     <div id="pomotimer">
-        <div id="timer">00:00</div>
+        <div id="minute">00:00</div>
+    </div>
+    <div id="buttoncontainer">
+        <button class="buttons" onclick="startFunction()"style="font-size: 25px; background-color: rgb(153, 255, 0);">start</button>
+        <button class="buttons" onclick ="pauseFunction()"style="font-size: 25px; background-color: red;">pause</button>
     </div>
     <div class="video-container">
         <video controls autoplay loop muted src="backgroundvid.mp4" width="500px"></video>
