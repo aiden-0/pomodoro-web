@@ -1,0 +1,28 @@
+body{
+    font-family: 'Press Start 2P'
+}
+
+h1{
+    text-align: center;
+    font-family: 'Press Start 2P';
+}
+
+#pomotimer{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 60px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 70vh;
+    
+}
+
+video {
+    max-width: 100%;         
+    width: 600px;            
+    height: auto;
+}
