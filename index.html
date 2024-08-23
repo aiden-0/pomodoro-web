@@ -11,15 +11,17 @@
     <h1 class="title">Brutal Pomodoro</h1>
     <hr color="black">
     <div id="pomotimer">
-        <div id="minute">00:00</div>
+        <p id="minute">10:00</p>
     </div>
     <div id="buttoncontainer">
-        <button class="buttons" onclick="startFunction()"style="font-size: 25px; background-color: rgb(153, 255, 0);">start</button>
-        <button class="buttons" onclick ="pauseFunction()"style="font-size: 25px; background-color: red;">pause</button>
+        <button id="start" class="buttons" onclick="start()"style="font-size: 25px; background-color: rgb(0, 255, 0);">start</button>
+        <button id="pause" class="buttons" onclick ="pause()"style="font-size: 25px; background-color: red;">pause</button><br>
+        <button id="timePreset1" class="buttonTimer" onclick ="changePreset()"style="font-size: 25px; background-color: rgb(0, 255, 200);">25/5</button>
+        <button id="timePreset2" class="buttonTimer" onclick ="changePreset()"style="font-size: 25px; background-color: rgb(0, 255, 200);">50/10</button>
     </div>
     <div class="video-container">
         <video controls autoplay loop muted src="backgroundvid.mp4" width="500px"></video>
     </div>
-    
+    <script src="index.js"></script>
 </body>
 </html>
