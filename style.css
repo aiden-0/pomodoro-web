@@ -7,9 +7,15 @@ h1{
     font-family: 'Press Start 2P';
 }
 
+#workingTitle{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
 #pomotimer{
     text-align: center;
-    margin-top: 70px;
+    margin-top: 50px;
     font-size: 60px;
 }
 

@@ -1,18 +1,24 @@
 const startButton = document.getElementById("start")
 const pauseButton = document.getElementById("pause")
 const minTimer = document.getElementById("minute")
+const workingTitle = document.getElementById("workingTitle")
 let startMinutes = 25;
 let breakMinutes = 5;
-let breakTotaltime = breakMinutes *60;
+let breakTotaltime = breakMinutes * 60;
 let time = startMinutes * 60;
 let isRunning = false;
-let userPause = false; 
+let isWorking = true; 
 let countdown;
 
 
 function breakTimer(){
     breakTotaltime = breakMinutes * 60;
     updateTimer(breakTotaltime)
+}
+
+function workTimer(){
+    time = startMinutes * 60;
+    updateTimer(time)
 }
 
 function updateTimer(duration){
@@ -37,7 +43,15 @@ function updateTimer(duration){
 
         if(time < 0){ 
             clearInterval(countdown);
-            breakTimer(breakTotaltime)
+            if(isWorking == true){
+                isWorking = false;
+                workingTitle.innerHTML = "break time";
+                breakTimer();
+            }else{
+                isWorking = true;
+                workingTitle.innerHTML = "lock in";
+                workTimer();
+            }
         }
     }
     countdown = setInterval(countdownFunc,1000);
@@ -54,6 +68,7 @@ function start(){
 
 function reset(){
     clearInterval(countdown);
+    workingTitle.innerHTML = "lock in";
     minTimer.innerHTML = `${startMinutes}:00`;
     isRunning = false;
 }
@@ -69,5 +84,8 @@ function setPreset2(){
     breakMinutes = 10;
     reset();
 }
+
+
+
 
 
