@@ -2,8 +2,9 @@ const startButton = document.getElementById("start")
 const pauseButton = document.getElementById("pause")
 const minTimer = document.getElementById("minute")
 const workingTitle = document.getElementById("workingTitle")
-let startMinutes = 25;
-let breakMinutes = 5;
+const audioAlarm = new Audio("newAlarm.mp3");
+let startMinutes = 0.1;
+let breakMinutes = 0.2;
 let breakTotaltime = breakMinutes * 60;
 let time = startMinutes * 60;
 let isRunning = false;
@@ -42,6 +43,7 @@ function updateTimer(duration){
         time--;
 
         if(time < 0){ 
+            audioAlarm.play();
             clearInterval(countdown);
             if(isWorking == true){
                 isWorking = false;
